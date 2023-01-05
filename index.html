@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elena Picanço</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="assets/images/Logo web.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Raleway:wght@100;200;300;400;600;700;900&family=Roboto:wght@300;400;500;700&family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/97d6c76f0c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Barra de Navegación -->
+    <section class="hero-banner">
+      <div class="nav">
+        <input type="checkbox" id="nav-check" />
+        <div class="nav-header">
+          <img class="nav-logo" src="./assets/images/trumpet.png" />
+        </div>
+        <div class="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+
+        <div class="nav-links">
+          <button class="nav-button" onclick="ROUTER.load('home')" id="Home">
+            Home
+          </button>
+          <button
+            class="nav-button"
+            onclick="ROUTER.load('biografia')"
+            id="Biografia"
+          >
+            Biografia
+          </button>
+          <button
+            class="nav-button"
+            onclick="ROUTER.load('galeria')"
+            id="Galeria"
+          >
+            Galeria
+          </button>
+          <button
+            class="nav-button"
+            onclick="ROUTER.load('proyectos')"
+            id="Proyectos"
+          >
+            Proyectos
+          </button>
+          <button
+            class="nav-button"
+            onclick="ROUTER.load('contacto')"
+            id="Contacto"
+          >
+            Contacto
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div id="content"></div>
+
+    <!-- Sección Footer  -->
+    <footer class="footer">
+      <div class="container_rrss">
+        <!-- <p class="heading_h4"><strong>Puedes seguirme en:</strong></p> -->
+        <div class="text_icon">
+          <a href="https://instagram.com/elenapicanso" target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+        </div>
+        <div class="text_icon">
+          <a
+            href="https://www.linkedin.com/in/elenarodriguezpicanco/"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </div>
+        <div class="text_icon">
+          <a
+            href="https://www.youtube.com/channel/UCV-wSZQVGU9h-fmcbMz1ltw"
+            target="_blank"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+        </div>
+        <div class="text_icon">
+          <a href="https://twitter.com/elenapicanco" target="_blank"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+        </div>
+      </div>
+      <p>
+        Built with &#x2661; by
+        <a href="https://instagram.com/elenapicanso" target="_blank"
+          >Elena Picanço</a
+        >
+      </p>
+    </footer>
+    <script src="./js/router.js"></script>
+    <script src="./js/routes.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
