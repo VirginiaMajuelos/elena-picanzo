@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Elena Picanço</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="assets/images/Logo web.png" />
+    <link rel="shortcut icon" href="assets/images/LogoWeb.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -35,42 +35,283 @@
         </div>
 
         <div class="nav-links">
-          <button class="nav-button" onclick="ROUTER.load('home')" id="Home">
+          <button
+            class="nav-button"
+            onclick="openPage('Home', this)"
+            id="defaultOpen"
+          >
             Home
           </button>
-          <button
-            class="nav-button"
-            onclick="ROUTER.load('biografia')"
-            id="Biografia"
-          >
+          <button class="nav-button" onclick="openPage('Biografia', this)">
             Biografia
           </button>
-          <button
-            class="nav-button"
-            onclick="ROUTER.load('galeria')"
-            id="Galeria"
-          >
+          <button class="nav-button" onclick="openPage('Galeria', this)">
             Galeria
           </button>
-          <button
-            class="nav-button"
-            onclick="ROUTER.load('proyectos')"
-            id="Proyectos"
-          >
+          <button class="nav-button" onclick="openPage('Proyectos', this)">
             Proyectos
           </button>
-          <button
-            class="nav-button"
-            onclick="ROUTER.load('contacto')"
-            id="Contacto"
-          >
+          <button class="nav-button" onclick="openPage('Contacto', this)">
             Contacto
           </button>
         </div>
       </div>
     </section>
 
-    <div id="content"></div>
+    <!-- Sección Home -->
+    <section class="tabcontent section-home" id="Home">
+      <h1 class="section-home__title">Elena Picanço</h1>
+      <p class="section-home__subtitle">Cantante / Trompetista</p>
+      <hr />
+      <img
+        class="section-home__imagen"
+        src="../assets/images/hero-banner_desktop.jpg"
+      />
+    </section>
+
+    <!-- Sección Biografia  -->
+
+    <section class="tabcontent section-biografia" id="Biografia">
+      <h2 class="heading_h2">Sobre mi.</h2>
+      <hr />
+      <p class="text">
+        Nacida en mayo de 1996, andaluza de cuna y exploradora de otras
+        ciudades. Graduada en Enseñanzas Artísticas Musicales en
+        Interpretación-trompeta por el Conservatorio Superior de Música «Manuel
+        Castillo» de Sevilla en junio de 2019. En septiembre de 2017 viaja a
+        Bélgica, al Koninklijk Conservatorium Brussel, para completar el curso
+        con el trompetista Manu Mellaerts. Motivada por un crecimiento personal
+        y profesional.
+      </p>
+      <p class="text">
+        Ambiciosa por aprender todo lo que pueda de la forma que sea.
+        Enriqueciéndose de la sabiduría popular y estudiosos, «gente que se
+        aproxime a tu forma de ver la vida, experiencias, que te haga crecer y
+        ser mejor».
+      </p>
+      <p class="text">
+        Hace 20 años que empecé en el mundo de la música y he podido formar
+        parte de grupos musicales, orquestas y bandas, actuando en diferentes
+        espectáculos como cantante, corista e instrumentista. Además, de
+        trabajar con niños en escuelas de música y como profesora particular de
+        instrumento.
+      </p>
+
+      <div class="galeria">
+        <img src="assets/images/galeria3.jpg" alt="imagen-Elena-1" />
+        <img src="assets/images/galeria8.jpg" alt="imagen-Elena-2" />
+        <img src="assets/images/galeria9.png" alt="imagen-Elena-3" />
+        <img src="assets/images/galeria5.jpg" alt="imagen-Elena-4" />
+      </div>
+
+      <h2 class="heading_h2">Estudios</h2>
+      <hr />
+    </section>
+
+    <!-- Sección Galeria  -->
+
+    <section class="tabcontent section-galeria" id="Galeria">
+      <h2 class="heading_h2">Galeria</h2>
+      <hr />
+      <div class="main">
+        <div class="gallery">
+          <div class="gallery__item">
+            <img src="../assets/images/galeria1.jpg" />
+          </div>
+          <div class="gallery__item">
+            <img src="../assets/images/galeria2.jpg" />
+          </div>
+          <div class="gallery__item">
+            <img src="../assets/images/galeria3.jpg" />
+          </div>
+          <div class="gallery__item">
+            <img src="../assets/images/galeria4.jpg" />
+          </div>
+          <div class="gallery__item">
+            <img src="../assets/images/galeria5.jpg" />
+          </div>
+          <div class="gallery__item">
+            <img src="../assets/images/galeria6.jpg" />
+          </div>
+          <div class="gallery__item">
+            <img src="../assets/images/galeria7.jpg" />
+          </div>
+          <div class="gallery__item">
+            <img src="../assets/images/galeria8.jpg" />
+          </div>
+          <div class="gallery__item">
+            <img src="../assets/images/galeria9.png" />
+          </div>
+          <div class="gallery__item">
+            <img src="../assets/images/LVDE4.jpg" />
+          </div>
+          <div class="gallery__item">
+            <img src="../assets/images/LVDE1.jpg" />
+          </div>
+          <div class="gallery__item">
+            <img src="../assets/images/LVDE2.jpg" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Proyectos  -->
+
+    <section class="tabcontent section-proyectos" id="Proyectos">
+      <h2 class="heading_h2">Proyectos.</h2>
+      <hr />
+      <h3 class="heading_h3">Las Vecinas de Enfrente</h3>
+      <img
+        class="container__img"
+        src="./assets/images/LVDE2.jpg"
+        alt="Las Vecinas De enfrente"
+      />
+      <p class="text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Vel risus commodo
+        viverra maecenas. Diam vulputate ut pharetra sit. Egestas dui id ornare
+        arcu. Non odio euismod lacinia at quis risus sed vulputate odio.
+        Pharetra vel turpis nunc eget lorem dolor sed. Arcu non sodales neque
+        sodales ut etiam sit. Eleifend mi in nulla posuere sollicitudin aliquam
+        ultrices. Quam adipiscing vitae proin sagittis nisl rhoncus mattis
+        rhoncus urna. Amet commodo nulla facilisi nullam. Dignissim convallis
+        aenean et tortor. Sem fringilla ut morbi tincidunt augue interdum velit.
+        Purus viverra accumsan in nisl nisi scelerisque eu ultrices vitae. Proin
+        nibh nisl condimentum id venenatis. Velit ut tortor pretium viverra
+        suspendisse potenti nullam ac.
+      </p>
+      <p class="text">
+        Purus non enim praesent elementum facilisis. Enim ut tellus elementum
+        sagittis vitae et leo duis. Arcu vitae elementum curabitur vitae nunc
+        sed velit dignissim. Orci dapibus ultrices in iaculis nunc sed augue
+        lacus viverra. Et netus et malesuada fames ac turpis. A pellentesque sit
+        amet porttitor eget dolor morbi non. Tellus rutrum tellus pellentesque
+        eu tincidunt tortor aliquam. Mauris nunc congue nisi vitae suscipit
+        tellus mauris a. Nisi est sit amet facilisis magna etiam tempor orci eu.
+        Nunc pulvinar sapien et ligula. Donec ac odio tempor orci dapibus
+        ultrices in iaculis. Sem fringilla ut morbi tincidunt. Urna condimentum
+        mattis pellentesque id. Condimentum mattis pellentesque id nibh tortor
+        id aliquet. Ipsum dolor sit amet consectetur adipiscing elit ut aliquam.
+        Tempor orci eu lobortis elementum nibh.
+      </p>
+      <iframe
+        class="container_img"
+        src="https://www.youtube.com/embed/vEMipZHf2zk"
+        title="YouTube Las Vecinas De Enfrente"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+      <div class="container__enlaces">
+        <a
+          class="text_icon"
+          href="https://www.youtube.com/@lasvecinasdeenfrente2513"
+          target="_blank"
+          ><i class="fa-brands fa-youtube"></i
+        ></a>
+        <a
+          class="enlaces"
+          target="_blank"
+          href="https://www.youtube.com/@lasvecinasdeenfrente2513"
+          title="enlace a youtube: las vecinas de enfrente"
+          >Youtube: las vecinas de enfrente</a
+        >
+      </div>
+
+      <hr />
+      <h3 class="heading_h3">Los QueTeDije</h3>
+      <img
+        class="container__img"
+        src="./assets/images/galeria9.png"
+        alt="Los Que Te Dije"
+      />
+      <p class="text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Vel risus commodo
+        viverra maecenas. Diam vulputate ut pharetra sit. Egestas dui id ornare
+        arcu. Non odio euismod lacinia at quis risus sed vulputate odio.
+        Pharetra vel turpis nunc eget lorem dolor sed. Arcu non sodales neque
+        sodales ut etiam sit. Eleifend mi in nulla posuere sollicitudin aliquam
+        ultrices. Quam adipiscing vitae proin sagittis nisl rhoncus mattis
+        rhoncus urna. Amet commodo nulla facilisi nullam. Dignissim convallis
+        aenean et tortor. Sem fringilla ut morbi tincidunt augue interdum velit.
+        Purus viverra accumsan in nisl nisi scelerisque eu ultrices vitae. Proin
+        nibh nisl condimentum id venenatis. Velit ut tortor pretium viverra
+        suspendisse potenti nullam ac.
+      </p>
+      <p class="text">
+        Purus non enim praesent elementum facilisis. Enim ut tellus elementum
+        sagittis vitae et leo duis. Arcu vitae elementum curabitur vitae nunc
+        sed velit dignissim. Orci dapibus ultrices in iaculis nunc sed augue
+        lacus viverra. Et netus et malesuada fames ac turpis. A pellentesque sit
+        amet porttitor eget dolor morbi non. Tellus rutrum tellus pellentesque
+        eu tincidunt tortor aliquam. Mauris nunc congue nisi vitae suscipit
+        tellus mauris a. Nisi est sit amet facilisis magna etiam tempor orci eu.
+        Nunc pulvinar sapien et ligula. Donec ac odio tempor orci dapibus
+        ultrices in iaculis. Sem fringilla ut morbi tincidunt. Urna condimentum
+        mattis pellentesque id. Condimentum mattis pellentesque id nibh tortor
+        id aliquet. Ipsum dolor sit amet consectetur adipiscing elit ut aliquam.
+        Tempor orci eu lobortis elementum nibh.
+      </p>
+      <iframe
+        class="container_img"
+        src="https://www.youtube.com/embed/9vFgk5nT8L4"
+        title="Youtube Los QueTeDije"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+      <div class="container__enlaces">
+        <a
+          class="text_icon"
+          href="https://www.youtube.com/@LosQuetedijeOficial"
+          target="_blank"
+          ><i class="fa-brands fa-youtube"></i
+        ></a>
+        <a
+          class="enlaces"
+          target="_blank"
+          href="https://www.youtube.com/@LosQuetedijeOficial"
+          title="enlace a youtube: Los QueTeDije"
+          >Youtube: Los QueTeDije</a
+        >
+      </div>
+      <div class="container__enlaces">
+        <a
+          class="text_icon"
+          href="https://open.spotify.com/artist/2iOH4S7r6S6IWCiRfHIMYH?si=3cb8a6d2STO0atuY6eOz8g"
+          target="_blank"
+          ><i class="fa-brands fa-spotify"></i
+        ></a>
+        <a
+          class="enlaces"
+          target="_blank"
+          href="https://open.spotify.com/artist/2iOH4S7r6S6IWCiRfHIMYH?si=3cb8a6d2STO0atuY6eOz8g"
+          title="enlace a Spotify: Los QueTeDije"
+          >Spotify: Los QueTeDije</a
+        >
+      </div>
+    </section>
+
+    <!-- Sección Contacto  -->
+
+    <section class="tabcontent section-contacto" id="Contacto">
+      <h1>contacto</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Vel risus commodo
+        viverra maecenas. Diam vulputate ut pharetra sit. Egestas dui id ornare
+        arcu. Non odio euismod lacinia at quis risus sed vulputate odio.
+        Pharetra vel turpis nunc eget lorem dolor sed. Arcu non sodales neque
+        sodales ut etiam sit. Eleifend mi in nulla posuere sollicitudin aliquam
+        ultrices. Quam adipiscing vitae proin sagittis nisl rhoncus mattis
+        rhoncus urna. Amet commodo nulla facilisi nullam. Dignissim convallis
+        aenean et tortor. Sem fringilla ut morbi tincidunt augue interdum velit.
+        Purus viverra accumsan in nisl nisi scelerisque eu ultrices vitae. Proin
+        nibh nisl condimentum id venenatis. Velit ut tortor pretium viverra
+        suspendisse potenti nullam ac.
+      </p>
+    </section>
 
     <!-- Sección Footer  -->
     <footer class="footer">
@@ -108,8 +349,6 @@
         >
       </p>
     </footer>
-    <script src="./js/router.js"></script>
-    <script src="./js/routes.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>
