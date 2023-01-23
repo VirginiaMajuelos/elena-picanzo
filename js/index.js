@@ -1,31 +1,26 @@
 /* Tab navbar */
 
+const hamburguer = document.querySelector(".hamburguer");
+const navLink = document.querySelector(".nav__link");
+
+hamburguer.addEventListener("click", () => {
+  navLink.classList.toggle("hide");
+});
+navLink.addEventListener("click", () => {
+  navLink.classList.toggle("hide");
+});
+
 function openPage(pageName) {
   tabcontent = document.getElementsByClassName("tabcontent");
-  // Hide all elements with class="tabcontent" by default */
   var i, tabcontent;
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
-  // Show the specific tab content
   document.getElementById(pageName).style.display = "block";
 }
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
-
-/* navBar responsive*/
-let buttonNav = document.querySelectorAll(".tabcontent");
-
-if (window.screenX <= 600) {
-  console.log("estoy en pantalla pequeña");
-  buttonNav.addEventListener(
-    "click",
-    (hideNav = () => {
-      buttonNav.style.display = "none";
-    })
-  );
-}
 
 /*Galeria*/
 
@@ -94,3 +89,5 @@ let prevImg = () => {
   //return src of previous image
   return images[imgIndex].src;
 };
+
+//Eventos pasivos:

@@ -20,21 +20,23 @@
   </head>
   <body>
     <!-- Barra de Navegación -->
-    <section class="hero-banner">
-      <div class="nav">
-        <input type="checkbox" id="nav-check" />
-        <div class="nav-header">
-          <img class="nav-logo" src="./assets/images/trumpet.png" />
-        </div>
-        <div class="nav-btn">
-          <label for="nav-check">
-            <span></span>
-            <span></span>
-            <span></span>
-          </label>
+    <header>
+      <nav class="nav">
+        <picure>
+          <img
+            class="nav-logo"
+            src="./assets/images/Elena/trumpet1.png"
+            onclick="openPage('Home', this)"
+            alt="logo-trumpet"
+          />
+        </picure>
+        <div class="hamburguer">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
         </div>
 
-        <div class="nav-links">
+        <div class="nav__link hide">
           <button
             class="nav-button"
             onclick="openPage('Home', this)"
@@ -55,57 +57,118 @@
             Contacto
           </button>
         </div>
-      </div>
-    </section>
+      </nav>
+    </header>
 
     <!-- Sección Home -->
     <section class="tabcontent section-home" id="Home">
       <h1 class="section-home__title">Elena Picanço</h1>
       <p class="section-home__subtitle">Cantante / Trompetista</p>
       <hr />
-      <img
-        class="section-home__imagen"
-        src="../assets/images/hero-banner_desktop.jpg"
-      />
+      <p>
+        <em class="section-home__cita">
+          Siempre debemos mejorar nuestra propia versión. Esfuerzo, constancia y
+          superación.
+        </em>
+      </p>
+      <picture>
+        <img
+          class="section-home__imagen"
+          src="../assets/images/hero-banner_desktop.jpg"
+          alt="hero-banner"
+          loading="lazy"
+        />
+      </picture>
     </section>
 
     <!-- Sección Biografia  -->
 
     <section class="tabcontent section-biografia" id="Biografia">
-      <h2 class="heading_h2">Sobre mi.</h2>
+      <h2 class="heading_h2">Sobre mi</h2>
       <hr />
-      <p class="text">
-        Nacida en mayo de 1996, andaluza de cuna y exploradora de otras
-        ciudades. Graduada en Enseñanzas Artísticas Musicales en
-        Interpretación-trompeta por el Conservatorio Superior de Música «Manuel
-        Castillo» de Sevilla en junio de 2019. En septiembre de 2017 viaja a
-        Bélgica, al Koninklijk Conservatorium Brussel, para completar el curso
-        con el trompetista Manu Mellaerts. Motivada por un crecimiento personal
-        y profesional.
-      </p>
-      <p class="text">
-        Ambiciosa por aprender todo lo que pueda de la forma que sea.
-        Enriqueciéndose de la sabiduría popular y estudiosos, «gente que se
-        aproxime a tu forma de ver la vida, experiencias, que te haga crecer y
-        ser mejor».
-      </p>
-      <p class="text">
-        Hace 20 años que empecé en el mundo de la música y he podido formar
-        parte de grupos musicales, orquestas y bandas, actuando en diferentes
-        espectáculos como cantante, corista e instrumentista. Además, de
-        trabajar con niños en escuelas de música y como profesora particular de
-        instrumento.
-      </p>
-
+      <div>
+        <p class="text">
+          Nacida en mayo de 1996 en Niebla, andaluza de cuna y exploradora de
+          otras ciudades. Graduada en Enseñanzas Artísticas Musicales en
+          Interpretación-trompeta por el Conservatorio Superior de Música
+          «Manuel Castillo» de Sevilla en junio de 2019. En septiembre de 2017,
+          motivada por un crecimiento personal y profesional, realicé el curso
+          académico en Bélgica, en el Koninklijk Conservatorium Brussel, con el
+          trompetista Manu Mellaerts.
+        </p>
+        <p class="text">
+          Ambiciosa por aprender todo lo que pueda de la forma que sea. La
+          sabiduría popular y estudiosos me enriquecen, además de «gente que se
+          aproxime a tu forma de ver la vida, experiencias, que te haga crecer y
+          ser mejor».
+        </p>
+        <p class="text">
+          Hace 20 años que empecé en el mundo de la música y he podido formar
+          parte de grupos musicales, orquestas y bandas, actuando en diferentes
+          espectáculos como cantante, corista e instrumentista, trompetista.
+          Además, he trabajado con niños en escuelas de música y como profesora
+          particular de instrumento.
+        </p>
+      </div>
       <div class="galeria">
-        <img src="assets/images/galeria3.jpg" alt="imagen-Elena-1" />
-        <img src="assets/images/galeria8.jpg" alt="imagen-Elena-2" />
-        <img src="assets/images/galeria9.png" alt="imagen-Elena-3" />
-        <img src="assets/images/galeria5.jpg" alt="imagen-Elena-4" />
+        <picture>
+          <img
+            src="assets/images/galeria8.jpg"
+            alt="imagen-Elena-2"
+            loading="lazy"
+          />
+          <img
+            src="assets/images/Elena/elena_05.jpg"
+            alt="imagen-Elena-3"
+            loading="lazy"
+          />
+          <img
+            src="assets/images/galeria2.jpg"
+            alt="imagen-Elena-1"
+            loading="lazy"
+          />
+          <img
+            src="assets/images/galeria5.jpg"
+            alt="imagen-Elena-4"
+            loading="lazy"
+          />
+        </picture>
       </div>
 
       <h2 class="heading_h2">Estudios</h2>
       <hr />
+      <div>
+        <p class="text">
+          A los 5 años comienzo en la Escuela Municipal de Música de Niebla, mi
+          pueblo, donde la gran Elena Bernal tuvo un papel fundamental en esta
+          andadura, que sin saberlo había comenzado. Fueron años de educación
+          auditiva, lenguaje musical, y empezar a tocar un instrumento, en aquel
+          momento la flauta dulce.
+        </p>
+        <p class="text">
+          Con 9 años accedo a las enseñanzas regladas de música, curso
+          Enseñanzas Elementales en el Conservatorio Elemental de Música
+          "Antonio Garrido Gamonoso" de Valverde del Camino. Más tarde, estudio
+          Enseñanzas Profesionales de Música en el Conservatorio Profesional de
+          Música "Javier Perianes" de Huelva. Comparto horas de estudio entre la
+          música y el Bachillerato de Artes. Superando cada año en los
+          diferentes centros, en 2015 y las pruebas de acceso pertinentes accedo
+          a las Enseñanzas Superiores de Música en el Conservatorio Superior de
+          Música "Manuel Castillo" de Sevilla.
+        </p>
+        <p class="text">
+          Durante mi carrera he participado en diversos cursos de
+          perfeccionamiento musical e instrumental y concursos de música de
+          cámara. Además he recibido clases con profesores de alto nivel como
+          Rainer Auerbach, Jorge Almeida, Joseba Robles, Benjamín Moreno, Ángel
+          Tomás San Bartolomé, Ruben Simeó, Fabio Brum, Fernando Ciancio, Jose
+          Forte, Marcos Garcia Vaquero, Jeroen Berwaerts, y Jordi Albert.
+        </p>
+        <p class="text">
+          En octubre de 2022 me graduo en el Máster de Pedagogía Musical,
+          impartido por la Universidad Internacional de la Rioja (UNIR).
+        </p>
+      </div>
     </section>
 
     <!-- Sección Galeria  -->
@@ -116,40 +179,116 @@
       <div class="main">
         <div class="gallery">
           <div class="gallery__item">
-            <img src="../assets/images/galeria1.jpg" />
+            <img
+              src="../assets/images/galeria1.jpg"
+              alt="imagen_galeria_1"
+              loading="lazy"
+            />
           </div>
           <div class="gallery__item">
-            <img src="../assets/images/galeria2.jpg" />
+            <img
+              src="../assets/images/galeria3.jpg"
+              alt="imagen_galeria_2"
+              loading="lazy"
+            />
           </div>
           <div class="gallery__item">
-            <img src="../assets/images/galeria3.jpg" />
+            <img
+              src="../assets/images/LVDE/LVDE_02.jpg"
+              alt="imagen_galeria_3"
+              loading="lazy"
+            />
           </div>
           <div class="gallery__item">
-            <img src="../assets/images/galeria4.jpg" />
+            <img
+              src="../assets/images/galeria5.jpg"
+              alt="imagen_galeria_4"
+              loading="lazy"
+            />
           </div>
           <div class="gallery__item">
-            <img src="../assets/images/galeria5.jpg" />
+            <img
+              src="../assets/images/galeria6.jpg"
+              alt="imagen_galeria_5"
+              loading="lazy"
+            />
           </div>
           <div class="gallery__item">
-            <img src="../assets/images/galeria6.jpg" />
+            <img
+              src="../assets/images/galeria2.jpg"
+              alt="imagen_galeria_6"
+              loading="lazy"
+            />
           </div>
           <div class="gallery__item">
-            <img src="../assets/images/galeria7.jpg" />
+            <img
+              src="../assets/images/galeria7.jpg"
+              alt="imagen_galeria_7"
+              loading="lazy"
+            />
           </div>
           <div class="gallery__item">
-            <img src="../assets/images/galeria8.jpg" />
+            <img
+              src="../assets/images/galeria8.jpg"
+              alt="imagen_galeria_8"
+              loading="lazy"
+            />
           </div>
           <div class="gallery__item">
-            <img src="../assets/images/galeria9.png" />
+            <img
+              src="../assets/images/galeria9.png"
+              alt="imagen_galeria_9"
+              loading="lazy"
+            />
           </div>
           <div class="gallery__item">
-            <img src="../assets/images/LVDE4.jpg" />
+            <img
+              src="../assets/images/Elena/elena_orquesta_03.jpeg"
+              alt="imagen_galeria_10"
+              loading="lazy"
+            />
           </div>
           <div class="gallery__item">
-            <img src="../assets/images/LVDE1.jpg" />
+            <img
+              src="../assets/images/LVDE/LVDE_04.jpg"
+              alt="imagen_galeria_11"
+              loading="lazy"
+            />
           </div>
           <div class="gallery__item">
-            <img src="../assets/images/LVDE2.jpg" />
+            <img
+              src="../assets/images/LVDE/LVDE_01.jpg"
+              alt="imagen_galeria_12"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery__item">
+            <img
+              src="../assets/images/galeria4.jpg"
+              alt="imagen_galeria_13"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery__item">
+            <img
+              src="../assets/images/LQTD/LQTD_03.jpeg"
+              alt="imagen_galeria_14"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery__item">
+            <img
+              src="../assets/images/LQTD/LQTD_04.jpeg"
+              alt="imagen_galeria_15"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery__item">
+            <img
+              src="../assets/images/LQTD/LQTD_05.jpeg"
+              alt="imagen_galeria_16"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
@@ -158,48 +297,139 @@
     <!-- Sección Proyectos  -->
 
     <section class="tabcontent section-proyectos" id="Proyectos">
-      <h2 class="heading_h2">Proyectos.</h2>
+      <h2 class="heading_h2">Proyectos</h2>
       <hr />
+      <p class="text__head">
+        Durante los años de formación pasamos por los diferentes grupos
+        musicales como bandas, orquestas, grupos de cámara... Respecto a mi
+        experiencia más autónoma he tenido y tengo el placer de pertenecer a los
+        siguientes conjuntos.
+      </p>
+
+      <h3 class="heading_h3">Orquesta | Trompeta</h3>
+      <!-- <img
+        class="container__img"
+        src="./assets/images/Elena/elena_orquesta_02.JPEG"
+        alt="Concierto Navideño Orquesta Madrid Sinfónica Décimo Arte"
+        loading="lazy"
+      /> -->
+      <ul class="text__list">
+        <li>
+          2023: Orquesta Sinfónica de la Universidad Complutense de Madrid
+        </li>
+        <li>2022: Madrid Sinfónica Décimo Arte</li>
+        <li>2022: Joven Orquesta Sierra de Madrid (JOsM)</li>
+        <li>
+          2017: Brussels Young Philharmonic (Joven Orquesta Filarmónica de
+          Bruselas)
+        </li>
+        <li>2015: Orquesta Joven de Huelva (OJH)</li>
+      </ul>
+
+      <hr />
+
+      <h3 class="heading_h3">Voz | Elena Picanço</h3>
+      <img
+        class="container__img"
+        src="./assets/images/galeria3.jpg"
+        alt="Las Vecinas De enfrente"
+        loading="lazy"
+      />
+      <p class="text">
+        Una de mis grandes pasiones musicales, a parte de la trompeta es cantar.
+        Desde pequeña, ya quería cantar con el coro de la escuela de música de
+        mi pueblo, donde al poco tiempo conseguí hacer unos versos a solo.
+      </p>
+      <p class="text">
+        Muchos años después, y combatiendo a la vergüenza, alzo mi voz para
+        cantar por sevillanas, algún que otro fandango de Huelva y las versiones
+        de mis cantantes favoritos en reuniones de amigos. Tal fue el impacto
+        que, aunque siga sintiendo respeto y un poco de miedo por expresar esta
+        faceta mía, he escrito alguna canción (que espero grabar en estudio
+        pronto) y versionar alguna canción.
+      </p>
+
+      <p class="text">
+        Mi inquietud me lleva a conocer otros instrumentos como la guitarra, que
+        aprendo de forma autodidacta, y me sirve para dar un pequeño
+        acompañamiento a alguna de estas melodías y encontrarme en alguna
+        canción.
+      </p>
+
+      <p class="text">
+        De todas estas maneras creo y quieros mostraros quién es Elena, desde su
+        profesión, su autenticidad, profesionalidad, vital, responsabilidad y
+        dedicación.
+      </p>
+      <iframe
+        class="container__video"
+        src="https://www.youtube.com/embed/V1-8n3RetUE"
+        title="YouTube Elena Picanço"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <div class="container__enlaces">
+        <a
+          class="text_icon"
+          href="https://www.youtube.com/@elenapicanso"
+          target="_blank"
+          ><i class="fa-brands fa-youtube"></i
+        ></a>
+        <a
+          class="enlaces"
+          target="_blank"
+          href="https://www.youtube.com/@elenapicanso"
+          title="enlace a youtube: Elena Picanço"
+          >Youtube: Elena Picanço</a
+        >
+      </div>
+
+      <hr />
+
       <h3 class="heading_h3">Las Vecinas de Enfrente</h3>
       <img
         class="container__img"
-        src="./assets/images/LVDE2.jpg"
+        src="./assets/images/LVDE/LVDE_02.jpg"
         alt="Las Vecinas De enfrente"
+        loading="lazy"
       />
       <p class="text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Vel risus commodo
-        viverra maecenas. Diam vulputate ut pharetra sit. Egestas dui id ornare
-        arcu. Non odio euismod lacinia at quis risus sed vulputate odio.
-        Pharetra vel turpis nunc eget lorem dolor sed. Arcu non sodales neque
-        sodales ut etiam sit. Eleifend mi in nulla posuere sollicitudin aliquam
-        ultrices. Quam adipiscing vitae proin sagittis nisl rhoncus mattis
-        rhoncus urna. Amet commodo nulla facilisi nullam. Dignissim convallis
-        aenean et tortor. Sem fringilla ut morbi tincidunt augue interdum velit.
-        Purus viverra accumsan in nisl nisi scelerisque eu ultrices vitae. Proin
-        nibh nisl condimentum id venenatis. Velit ut tortor pretium viverra
-        suspendisse potenti nullam ac.
+        Esta agrupación tan pintoresca, carismática, versátil y disfrutona como
+        es Las Vecinas de Enfrente nace en el que fue nuestro hogar sevillano
+        allá por 2019. La convivencia dio a estas cuatro amigas una nueva forma
+        de crear, crecer y beber de la misma locura, y por supuesto pasarlo en
+        grande.
       </p>
+
       <p class="text">
-        Purus non enim praesent elementum facilisis. Enim ut tellus elementum
-        sagittis vitae et leo duis. Arcu vitae elementum curabitur vitae nunc
-        sed velit dignissim. Orci dapibus ultrices in iaculis nunc sed augue
-        lacus viverra. Et netus et malesuada fames ac turpis. A pellentesque sit
-        amet porttitor eget dolor morbi non. Tellus rutrum tellus pellentesque
-        eu tincidunt tortor aliquam. Mauris nunc congue nisi vitae suscipit
-        tellus mauris a. Nisi est sit amet facilisis magna etiam tempor orci eu.
-        Nunc pulvinar sapien et ligula. Donec ac odio tempor orci dapibus
-        ultrices in iaculis. Sem fringilla ut morbi tincidunt. Urna condimentum
-        mattis pellentesque id. Condimentum mattis pellentesque id nibh tortor
-        id aliquet. Ipsum dolor sit amet consectetur adipiscing elit ut aliquam.
-        Tempor orci eu lobortis elementum nibh.
+        Empezamos a llamarnos 12 Cuerdas, haciendo un juego de palabras entre
+        los instrumentos que nos componen (cello, piano) y voz. Un nombre que
+        tuvimos que decidir al subirno al escenario de La Sala, que nos embrujó
+        y nos vio nacer en el barrio del Pumarejo. No solo fusionamos
+        instrumentos de cuerda, también introdujimos la trompeta y clarinete, lo
+        que nos facilitó algunos arreglos y componer nuestras propias canciones.
+      </p>
+
+      <p class="text">
+        Hicimos un cóctel genial, pues cada una aportaba sus gustos y las manera
+        en la que viven la música para obtener el resultado y muchos buuenos
+        momentos que recreamos. Sin duda el proyecto más complice, auténtico y
+        emocionante que hemos podido vivir juntas.
+      </p>
+
+      <p class="text">
+        Por desgracia, después de la pandemia y tras asuntos laborales de cada
+        una de las integrantes que nos llevaron a alejarnos en diferentes
+        puntos, tuvimos que dejar el proyecto en Stand by. Pero con las ganas
+        imensas de poder coincidir y volvernos a juntar algún día.
       </p>
       <iframe
-        class="container_img"
+        class="container__video"
         src="https://www.youtube.com/embed/vEMipZHf2zk"
         title="YouTube Las Vecinas De Enfrente"
         frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; "
         allowfullscreen
       ></iframe>
       <div class="container__enlaces">
@@ -224,43 +454,36 @@
         class="container__img"
         src="./assets/images/galeria9.png"
         alt="Los Que Te Dije"
+        loading="lazy"
       />
       <p class="text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Vel risus commodo
-        viverra maecenas. Diam vulputate ut pharetra sit. Egestas dui id ornare
-        arcu. Non odio euismod lacinia at quis risus sed vulputate odio.
-        Pharetra vel turpis nunc eget lorem dolor sed. Arcu non sodales neque
-        sodales ut etiam sit. Eleifend mi in nulla posuere sollicitudin aliquam
-        ultrices. Quam adipiscing vitae proin sagittis nisl rhoncus mattis
-        rhoncus urna. Amet commodo nulla facilisi nullam. Dignissim convallis
-        aenean et tortor. Sem fringilla ut morbi tincidunt augue interdum velit.
-        Purus viverra accumsan in nisl nisi scelerisque eu ultrices vitae. Proin
-        nibh nisl condimentum id venenatis. Velit ut tortor pretium viverra
-        suspendisse potenti nullam ac.
+        Este grupo musical cuenta con aproximadamente una década desde su
+        creación, cuando unos colegas de barrio se juntaban para crear sus
+        canciones y pasar un buen rato. Con el paso del tiempo fueron aumentando
+        el número de sus integrantes para consolidar una banda y empezar a
+        llevar su música por cada rincñon que se precie.
       </p>
+
       <p class="text">
-        Purus non enim praesent elementum facilisis. Enim ut tellus elementum
-        sagittis vitae et leo duis. Arcu vitae elementum curabitur vitae nunc
-        sed velit dignissim. Orci dapibus ultrices in iaculis nunc sed augue
-        lacus viverra. Et netus et malesuada fames ac turpis. A pellentesque sit
-        amet porttitor eget dolor morbi non. Tellus rutrum tellus pellentesque
-        eu tincidunt tortor aliquam. Mauris nunc congue nisi vitae suscipit
-        tellus mauris a. Nisi est sit amet facilisis magna etiam tempor orci eu.
-        Nunc pulvinar sapien et ligula. Donec ac odio tempor orci dapibus
-        ultrices in iaculis. Sem fringilla ut morbi tincidunt. Urna condimentum
-        mattis pellentesque id. Condimentum mattis pellentesque id nibh tortor
-        id aliquet. Ipsum dolor sit amet consectetur adipiscing elit ut aliquam.
-        Tempor orci eu lobortis elementum nibh.
+        Entre las diferentes creaciones propias, aquellas que han conquistados
+        las diferentes salas de concierto y lugar, por remoto que sea, combianan
+        cumbia, reggae y rumba.
       </p>
-      <iframe
-        class="container_img"
+
+      <p class="text">
+        A finales de 2018 me uno como integrante, donde pongo voz en coros, soy
+        trompetista e introduzco pequeños detalles con pequeña percusión.
+        Nuestra relación continua hasta septiembre de 2021, cuando por motivos
+        personales nuestras agendas no podían coincidir.
+      </p>
+      <!-- <iframe
+        class="container__video"
         src="https://www.youtube.com/embed/9vFgk5nT8L4"
         title="Youtube Los QueTeDije"
         frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; "
         allowfullscreen
-      ></iframe>
+      ></iframe> -->
       <div class="container__enlaces">
         <a
           class="text_icon"
@@ -296,21 +519,47 @@
     <!-- Sección Contacto  -->
 
     <section class="tabcontent section-contacto" id="Contacto">
-      <h1>contacto</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Vel risus commodo
-        viverra maecenas. Diam vulputate ut pharetra sit. Egestas dui id ornare
-        arcu. Non odio euismod lacinia at quis risus sed vulputate odio.
-        Pharetra vel turpis nunc eget lorem dolor sed. Arcu non sodales neque
-        sodales ut etiam sit. Eleifend mi in nulla posuere sollicitudin aliquam
-        ultrices. Quam adipiscing vitae proin sagittis nisl rhoncus mattis
-        rhoncus urna. Amet commodo nulla facilisi nullam. Dignissim convallis
-        aenean et tortor. Sem fringilla ut morbi tincidunt augue interdum velit.
-        Purus viverra accumsan in nisl nisi scelerisque eu ultrices vitae. Proin
-        nibh nisl condimentum id venenatis. Velit ut tortor pretium viverra
-        suspendisse potenti nullam ac.
-      </p>
+      <h2 class="heading_h2">Contacto</h2>
+      <hr />
+      <h2 class="form__title">Contáctame</h2>
+      <div class="container_contacto">
+        <p class="text"><strong>Mail:</strong> elenaropi1996@gmail.com</p>
+        <p class="text"><strong>Telf.:</strong> +34 655 30 81 83</p>
+        <p class="text">
+          <span> Si lo prefieres, puedes usar el siguiente formulario: </span>
+        </p>
+      </div>
+      <form action="https://formspree.io/f/moqzqpln" method="POST" class="form">
+        <div class="form__container">
+          <input
+            type="text"
+            class="form__input"
+            placeholder="Nombre: "
+            name="name"
+          />
+          <input
+            type="email"
+            class="form__input"
+            placeholder="Email: "
+            name="email"
+          />
+          <textarea
+            class="form__input--message"
+            placeholder="Mensaje:"
+            name="message"
+          ></textarea>
+          <input class="form__cta" type="submit" value="Enviar" />
+        </div>
+      </form>
+
+      <!-- <h2 class="form__title">Mi Curriculum:</h2>
+
+      <a
+        class="btn_download"
+        href="./assets/resume/ELENA RODRIGUEZ PICANÇO - CV MUSIC.pdf"
+        download
+        >Descargar</a
+      > -->
     </section>
 
     <!-- Sección Footer  -->
@@ -344,11 +593,12 @@
       </div>
       <p>
         Built with &#x2661; by
-        <a href="https://instagram.com/elenapicanso" target="_blank"
-          >Elena Picanço</a
+        <a href="https://www.linkedin.com/in/virginiamajuelos/" target="_blank"
+          >Virginia Majuelos</a
         >
       </p>
     </footer>
+
     <script src="./js/index.js"></script>
   </body>
 </html>
