@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Web portfolio Elena Picanço. Developer: Virginia Majuelos Fernández"
+    />
     <title>Elena Picanço</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="assets/images/LogoWeb.png" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="shortcut icon" href="assets/images/logo/LogoWeb.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,53 +24,64 @@
   </head>
   <body>
     <!-- Barra de Navegación -->
-    <header>
-      <nav class="nav">
-        <picure>
+    <header id="header">
+      <nav class="navbar">
+        <picture>
           <img
-            class="nav-logo"
+            class="navbar__logo"
             src="./assets/images/Elena/trumpet1.png"
             onclick="openPage('Home', this)"
             alt="logo-trumpet"
           />
-        </picure>
+        </picture>
 
-        <div class="nav__link hide">
+        <div class="navbar__link hide">
           <button
-            class="nav-button"
+            class="navbar__button"
             onclick="openPage('Home', this)"
             id="defaultOpen"
           >
             Home
           </button>
-          <button class="nav-button" onclick="openPage('Biografia', this)">
+          <button class="navbar__button" onclick="openPage('Biografia', this)">
             Biografia
           </button>
-          <button class="nav-button" onclick="openPage('Galeria', this)">
+          <button class="navbar__button" onclick="openPage('Galeria', this)">
             Galeria
           </button>
-          <button class="nav-button" onclick="openPage('Proyectos', this)">
+          <button class="navbar__button" onclick="openPage('Proyectos', this)">
             Proyectos
           </button>
-          <button class="nav-button" onclick="openPage('Contacto', this)">
+          <button class="navbar__button" onclick="openPage('Contacto', this)">
             Contacto
           </button>
         </div>
-        <div class="hamburguer">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
+        <div class="navbar__hamburguer">
+          <span class="navbar__line"></span>
+          <span class="navbar__line"></span>
+          <span class="navbar__line"></span>
         </div>
       </nav>
     </header>
+
+    <!--Button go up-->
+
+    <button
+      class="button__arrow"
+      id="btn_goUp"
+      onclick="upFunction()"
+      aria-labelledby="labelicon"
+    >
+      <i class="fa-solid fa-arrow-up" id="labelicon"></i>
+    </button>
 
     <!-- Sección Home -->
     <section class="tabcontent section-home" id="Home">
       <h1 class="section-home__title">Elena Picanço</h1>
       <p class="section-home__subtitle">Cantante / Trompetista</p>
-      <hr />
-      <p>
-        <em class="section-home__cita">
+      <div class="section__line"></div>
+      <p class="section-home__cita">
+        <em>
           Siempre debemos mejorar nuestra propia versión. Esfuerzo, constancia y
           superación.
         </em>
@@ -74,7 +89,7 @@
       <picture>
         <img
           class="section-home__imagen"
-          src="../assets/images/hero-banner_desktop.jpg"
+          src="../assets/images/hero-banner/hero-banner_desktop.jpg"
           alt="hero-banner"
           loading="lazy"
         />
@@ -84,10 +99,10 @@
     <!-- Sección Biografia  -->
 
     <section class="tabcontent section-biografia" id="Biografia">
-      <h2 class="heading_h2">Sobre mi</h2>
-      <hr />
+      <h2 class="heading__h2">Sobre mi</h2>
+      <div class="section__line"></div>
       <div>
-        <p class="text">
+        <p class="section__text">
           Nacida en mayo de 1996 en Niebla, andaluza de cuna y exploradora de
           otras ciudades. Graduada en Enseñanzas Artísticas Musicales en
           Interpretación-trompeta por el Conservatorio Superior de Música
@@ -96,13 +111,13 @@
           académico en Bélgica, en el Koninklijk Conservatorium Brussel, con el
           trompetista Manu Mellaerts.
         </p>
-        <p class="text">
+        <p class="section__text">
           Ambiciosa por aprender todo lo que pueda de la forma que sea. La
           sabiduría popular y estudiosos me enriquecen, además de «gente que se
           aproxime a tu forma de ver la vida, experiencias, que te haga crecer y
           ser mejor».
         </p>
-        <p class="text">
+        <p class="section__text">
           Hace 20 años que empecé en el mundo de la música y he podido formar
           parte de grupos musicales, orquestas y bandas, actuando en diferentes
           espectáculos como cantante, corista e instrumentista, trompetista.
@@ -110,42 +125,40 @@
           particular de instrumento.
         </p>
       </div>
-      <div class="galeria">
-        <picture>
-          <img
-            src="assets/images/galeria8.jpg"
-            alt="imagen-Elena-2"
-            loading="lazy"
-          />
-          <img
-            src="assets/images/Elena/elena_05.jpg"
-            alt="imagen-Elena-3"
-            loading="lazy"
-          />
-          <img
-            src="assets/images/galeria2.jpg"
-            alt="imagen-Elena-1"
-            loading="lazy"
-          />
-          <img
-            src="assets/images/galeria5.jpg"
-            alt="imagen-Elena-4"
-            loading="lazy"
-          />
-        </picture>
+      <div class="section-biografia__gallery">
+        <img
+          src="assets/images/Galeria/galeria8.jpg"
+          alt="imagen-Elena-2"
+          loading="lazy"
+        />
+        <img
+          src="assets/images/Elena/elena_05.jpg"
+          alt="imagen-Elena-3"
+          loading="lazy"
+        />
+        <img
+          src="assets/images/Galeria/galeria2.jpg"
+          alt="imagen-Elena-1"
+          loading="lazy"
+        />
+        <img
+          src="assets/images/Galeria/galeria5.jpg"
+          alt="imagen-Elena-4"
+          loading="lazy"
+        />
       </div>
 
-      <h2 class="heading_h2">Estudios</h2>
-      <hr />
+      <h2 class="heading__h2"></h2>
+      <div class="section__line"></div>
       <div>
-        <p class="text">
+        <p class="section__text">
           A los 5 años comienzo en la Escuela Municipal de Música de Niebla, mi
           pueblo, donde la gran Elena Bernal tuvo un papel fundamental en esta
           andadura, que sin saberlo había comenzado. Fueron años de educación
           auditiva, lenguaje musical, y empezar a tocar un instrumento, en aquel
           momento la flauta dulce.
         </p>
-        <p class="text">
+        <p class="section__text">
           Con 9 años accedo a las enseñanzas regladas de música, curso
           Enseñanzas Elementales en el Conservatorio Elemental de Música
           "Antonio Garrido Gamonoso" de Valverde del Camino. Más tarde, estudio
@@ -156,7 +169,7 @@
           a las Enseñanzas Superiores de Música en el Conservatorio Superior de
           Música "Manuel Castillo" de Sevilla.
         </p>
-        <p class="text">
+        <p class="section__text">
           Durante mi carrera he participado en diversos cursos de
           perfeccionamiento musical e instrumental y concursos de música de
           cámara. Además he recibido clases con profesores de alto nivel como
@@ -164,7 +177,7 @@
           Tomás San Bartolomé, Ruben Simeó, Fabio Brum, Fernando Ciancio, Jose
           Forte, Marcos Garcia Vaquero, Jeroen Berwaerts, y Jordi Albert.
         </p>
-        <p class="text">
+        <p class="section__text">
           En octubre de 2022 me graduo en el Máster de Pedagogía Musical,
           impartido por la Universidad Internacional de la Rioja (UNIR).
         </p>
@@ -174,116 +187,116 @@
     <!-- Sección Galeria  -->
 
     <section class="tabcontent section-galeria" id="Galeria">
-      <h2 class="heading_h2">Galeria</h2>
-      <hr />
-      <div class="main">
-        <div class="gallery">
-          <div class="gallery__item">
+      <h2 class="heading__h2">Galeria</h2>
+      <div class="section__line"></div>
+      <div class="section-galeria__main">
+        <div class="section-galeria__gallery">
+          <div class="section-galeria__gallery--item">
             <img
-              src="../assets/images/galeria1.jpg"
+              src="../assets/images/Galeria/galeria1.jpg"
               alt="imagen_galeria_1"
               loading="lazy"
             />
           </div>
-          <div class="gallery__item">
+          <div class="section-galeria__gallery--item">
             <img
-              src="../assets/images/galeria3.jpg"
+              src="../assets/images/Galeria/galeria3.jpg"
               alt="imagen_galeria_2"
               loading="lazy"
             />
           </div>
-          <div class="gallery__item">
+          <div class="section-galeria__gallery--item">
             <img
               src="../assets/images/LVDE/LVDE_02.jpg"
               alt="imagen_galeria_3"
               loading="lazy"
             />
           </div>
-          <div class="gallery__item">
+          <div class="section-galeria__gallery--item">
             <img
-              src="../assets/images/galeria5.jpg"
+              src="../assets/images/Galeria/galeria5.jpg"
               alt="imagen_galeria_4"
               loading="lazy"
             />
           </div>
-          <div class="gallery__item">
+          <div class="section-galeria__gallery--item">
             <img
-              src="../assets/images/galeria6.jpg"
+              src="../assets/images/Galeria/galeria6.jpg"
               alt="imagen_galeria_5"
               loading="lazy"
             />
           </div>
-          <div class="gallery__item">
+          <div class="section-galeria__gallery--item">
             <img
-              src="../assets/images/galeria2.jpg"
+              src="../assets/images/Galeria/galeria2.jpg"
               alt="imagen_galeria_6"
               loading="lazy"
             />
           </div>
-          <div class="gallery__item">
+          <div class="section-galeria__gallery--item">
             <img
-              src="../assets/images/galeria7.jpg"
+              src="../assets/images/Galeria/galeria7.jpg"
               alt="imagen_galeria_7"
               loading="lazy"
             />
           </div>
-          <div class="gallery__item">
+          <div class="section-galeria__gallery--item">
             <img
-              src="../assets/images/galeria8.jpg"
+              src="../assets/images/Galeria/galeria8.jpg"
               alt="imagen_galeria_8"
               loading="lazy"
             />
           </div>
-          <div class="gallery__item">
+          <div class="section-galeria__gallery--item">
             <img
-              src="../assets/images/galeria9.png"
+              src="../assets/images/Galeria/galeria9.png"
               alt="imagen_galeria_9"
               loading="lazy"
             />
           </div>
-          <div class="gallery__item">
+          <div class="section-galeria__gallery--item">
             <img
               src="../assets/images/Elena/elena_orquesta_03.jpeg"
               alt="imagen_galeria_10"
               loading="lazy"
             />
           </div>
-          <div class="gallery__item">
+          <div class="section-galeria__gallery--item">
             <img
               src="../assets/images/LVDE/LVDE_04.jpg"
               alt="imagen_galeria_11"
               loading="lazy"
             />
           </div>
-          <div class="gallery__item">
+          <div class="section-galeria__gallery--item">
             <img
               src="../assets/images/LVDE/LVDE_01.jpg"
               alt="imagen_galeria_12"
               loading="lazy"
             />
           </div>
-          <div class="gallery__item">
+          <div class="section-galeria__gallery--item">
             <img
-              src="../assets/images/galeria4.jpg"
+              src="../assets/images/Galeria/galeria4.jpg"
               alt="imagen_galeria_13"
               loading="lazy"
             />
           </div>
-          <div class="gallery__item">
+          <div class="section-galeria__gallery--item">
             <img
               src="../assets/images/LQTD/LQTD_03.jpeg"
               alt="imagen_galeria_14"
               loading="lazy"
             />
           </div>
-          <div class="gallery__item">
+          <div class="section-galeria__gallery--item">
             <img
               src="../assets/images/LQTD/LQTD_04.jpeg"
               alt="imagen_galeria_15"
               loading="lazy"
             />
           </div>
-          <div class="gallery__item">
+          <div class="section-galeria__gallery--item">
             <img
               src="../assets/images/LQTD/LQTD_05.jpeg"
               alt="imagen_galeria_16"
@@ -297,8 +310,8 @@
     <!-- Sección Proyectos  -->
 
     <section class="tabcontent section-proyectos" id="Proyectos">
-      <h2 class="heading_h2">Proyectos</h2>
-      <hr />
+      <h2 class="heading__h2">Proyectos</h2>
+      <div class="section__line"></div>
       <p class="text__head">
         Durante los años de formación pasamos por los diferentes grupos
         musicales como bandas, orquestas, grupos de cámara... Respecto a mi
@@ -306,7 +319,7 @@
         siguientes conjuntos.
       </p>
 
-      <h3 class="heading_h3">Orquesta | Trompeta</h3>
+      <h3 class="heading__h3">Orquesta | Trompeta</h3>
       <!-- <img
         class="container__img"
         src="./assets/images/Elena/elena_orquesta_02.JPEG"
@@ -326,21 +339,21 @@
         <li>2015: Orquesta Joven de Huelva (OJH)</li>
       </ul>
 
-      <hr />
+      <div class="section__line"></div>
 
-      <h3 class="heading_h3">Voz | Elena Picanço</h3>
+      <h3 class="heading__h3">Voz | Elena Picanço</h3>
       <img
         class="container__img"
-        src="./assets/images/galeria3.jpg"
+        src="./assets/images/Galeria/galeria3.jpg"
         alt="Las Vecinas De enfrente"
         loading="lazy"
       />
-      <p class="text">
+      <p class="section__text">
         Una de mis grandes pasiones musicales, a parte de la trompeta es cantar.
         Desde pequeña, ya quería cantar con el coro de la escuela de música de
         mi pueblo, donde al poco tiempo conseguí hacer unos versos a solo.
       </p>
-      <p class="text">
+      <p class="section__text">
         Muchos años después, y combatiendo a la vergüenza, alzo mi voz para
         cantar por sevillanas, algún que otro fandango de Huelva y las versiones
         de mis cantantes favoritos en reuniones de amigos. Tal fue el impacto
@@ -349,31 +362,32 @@
         pronto) y versionar alguna canción.
       </p>
 
-      <p class="text">
+      <p class="section__text">
         Mi inquietud me lleva a conocer otros instrumentos como la guitarra, que
         aprendo de forma autodidacta, y me sirve para dar un pequeño
         acompañamiento a alguna de estas melodías y encontrarme en alguna
         canción.
       </p>
 
-      <p class="text">
+      <p class="section__text">
         De todas estas maneras creo y quieros mostraros quién es Elena, desde su
         profesión, su autenticidad, profesionalidad, vital, responsabilidad y
         dedicación.
       </p>
-      <iframe
+      <!-- <iframe
         class="container__video"
         src="https://www.youtube.com/embed/V1-8n3RetUE"
         title="YouTube Elena Picanço"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
-      ></iframe>
+      ></iframe> -->
       <div class="container__enlaces">
         <a
-          class="text_icon"
+          class="text__icon"
           href="https://www.youtube.com/@elenapicanso"
           target="_blank"
+          aria-label="Conoce más sobre mi música en youtube"
           ><i class="fa-brands fa-youtube"></i
         ></a>
         <a
@@ -381,20 +395,21 @@
           target="_blank"
           href="https://www.youtube.com/@elenapicanso"
           title="enlace a youtube: Elena Picanço"
+          aria-label="Conoce más sobre mi música en youtube"
           >Youtube: Elena Picanço</a
         >
       </div>
 
-      <hr />
+      <div class="section__line"></div>
 
-      <h3 class="heading_h3">Las Vecinas de Enfrente</h3>
+      <h3 class="heading__h3">Las Vecinas de Enfrente</h3>
       <img
         class="container__img"
         src="./assets/images/LVDE/LVDE_02.jpg"
         alt="Las Vecinas De enfrente"
         loading="lazy"
       />
-      <p class="text">
+      <p class="section__text">
         Esta agrupación tan pintoresca, carismática, versátil y disfrutona como
         es Las Vecinas de Enfrente nace en el que fue nuestro hogar sevillano
         allá por 2019. La convivencia dio a estas cuatro amigas una nueva forma
@@ -402,7 +417,7 @@
         grande.
       </p>
 
-      <p class="text">
+      <p class="section__text">
         Empezamos a llamarnos 12 Cuerdas, haciendo un juego de palabras entre
         los instrumentos que nos componen (cello, piano) y voz. Un nombre que
         tuvimos que decidir al subirno al escenario de La Sala, que nos embrujó
@@ -411,32 +426,33 @@
         que nos facilitó algunos arreglos y componer nuestras propias canciones.
       </p>
 
-      <p class="text">
+      <p class="section__text">
         Hicimos un cóctel genial, pues cada una aportaba sus gustos y las manera
         en la que viven la música para obtener el resultado y muchos buuenos
         momentos que recreamos. Sin duda el proyecto más complice, auténtico y
         emocionante que hemos podido vivir juntas.
       </p>
 
-      <p class="text">
+      <p class="section__text">
         Por desgracia, después de la pandemia y tras asuntos laborales de cada
         una de las integrantes que nos llevaron a alejarnos en diferentes
         puntos, tuvimos que dejar el proyecto en Stand by. Pero con las ganas
         imensas de poder coincidir y volvernos a juntar algún día.
       </p>
-      <iframe
+      <!-- <iframe
         class="container__video"
         src="https://www.youtube.com/embed/vEMipZHf2zk"
         title="YouTube Las Vecinas De Enfrente"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; "
         allowfullscreen
-      ></iframe>
+      ></iframe> -->
       <div class="container__enlaces">
         <a
-          class="text_icon"
+          class="text__icon"
           href="https://www.youtube.com/@lasvecinasdeenfrente2513"
           target="_blank"
+          aria-label="Conoce más sobre la música de Las Vecinas De Enfrente en youtube"
           ><i class="fa-brands fa-youtube"></i
         ></a>
         <a
@@ -444,19 +460,20 @@
           target="_blank"
           href="https://www.youtube.com/@lasvecinasdeenfrente2513"
           title="enlace a youtube: las vecinas de enfrente"
+          aria-label="Conoce más sobre la música de Las Vecinas De Enfrente en youtube"
           >Youtube: las vecinas de enfrente</a
         >
       </div>
 
-      <hr />
-      <h3 class="heading_h3">Los QueTeDije</h3>
+      <div class="section__line"></div>
+      <h3 class="heading__h3">Los QueTeDije</h3>
       <img
         class="container__img"
-        src="./assets/images/galeria9.png"
+        src="./assets/images/Galeria/galeria9.png"
         alt="Los Que Te Dije"
         loading="lazy"
       />
-      <p class="text">
+      <p class="section__text">
         Este grupo musical cuenta con aproximadamente una década desde su
         creación, cuando unos colegas de barrio se juntaban para crear sus
         canciones y pasar un buen rato. Con el paso del tiempo fueron aumentando
@@ -464,46 +481,49 @@
         llevar su música por cada rincñon que se precie.
       </p>
 
-      <p class="text">
+      <p class="section__text">
         Entre las diferentes creaciones propias, aquellas que han conquistados
         las diferentes salas de concierto y lugar, por remoto que sea, combianan
         cumbia, reggae y rumba.
       </p>
 
-      <p class="text">
+      <p class="section__text">
         A finales de 2018 me uno como integrante, donde pongo voz en coros, soy
         trompetista e introduzco pequeños detalles con pequeña percusión.
         Nuestra relación continua hasta septiembre de 2021, cuando por motivos
         personales nuestras agendas no podían coincidir.
       </p>
-      <iframe
+      <!-- <iframe
         class="container__video"
         src="https://www.youtube.com/embed/9vFgk5nT8L4"
         title="Youtube Los QueTeDije"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; "
         allowfullscreen
-      ></iframe>
+      ></iframe> -->
       <div class="container__enlaces">
         <a
-          class="text_icon"
+          class="text__icon"
           href="https://www.youtube.com/@LosQuetedijeOficial"
           target="_blank"
+          aria-label="Conoce más sobre la música de Los QueTeDije en youtube"
           ><i class="fa-brands fa-youtube"></i
         ></a>
         <a
           class="enlaces"
           target="_blank"
           href="https://www.youtube.com/@LosQuetedijeOficial"
+          aria-label="Conoce más sobre la música de Los QueTeDije en youtube"
           title="enlace a youtube: Los QueTeDije"
           >Youtube: Los QueTeDije</a
         >
       </div>
       <div class="container__enlaces">
         <a
-          class="text_icon"
+          class="text__icon"
           href="https://open.spotify.com/artist/2iOH4S7r6S6IWCiRfHIMYH?si=3cb8a6d2STO0atuY6eOz8g"
           target="_blank"
+          aria-label="Conoce más sobre la música de Los QueTeDije en spotify"
           ><i class="fa-brands fa-spotify"></i
         ></a>
         <a
@@ -511,6 +531,7 @@
           target="_blank"
           href="https://open.spotify.com/artist/2iOH4S7r6S6IWCiRfHIMYH?si=3cb8a6d2STO0atuY6eOz8g"
           title="enlace a Spotify: Los QueTeDije"
+          aria-label="Conoce más sobre la música de Los QueTeDije en spotify"
           >Spotify: Los QueTeDije</a
         >
       </div>
@@ -519,13 +540,15 @@
     <!-- Sección Contacto  -->
 
     <section class="tabcontent section-contacto" id="Contacto">
-      <h2 class="heading_h2">Contacto</h2>
-      <hr />
+      <h2 class="heading__h2">Contacto</h2>
+      <div class="section__line"></div>
       <h2 class="form__title">Contáctame</h2>
       <div class="container_contacto">
-        <p class="text"><strong>Mail:</strong> elenaropi1996@gmail.com</p>
-        <p class="text"><strong>Telf.:</strong> +34 655 30 81 83</p>
-        <p class="text">
+        <p class="section__text">
+          <strong>Mail:</strong> elenaropi1996@gmail.com
+        </p>
+        <p class="section__text"><strong>Telf.:</strong> +34 655 30 81 83</p>
+        <p class="section__text">
           <span> Si lo prefieres, puedes usar el siguiente formulario: </span>
         </p>
       </div>
@@ -553,7 +576,6 @@
       </form>
 
       <!-- <h2 class="form__title">Mi Curriculum:</h2>
-
       <a
         class="btn_download"
         href="./assets/resume/ELENA RODRIGUEZ PICANÇO - CV MUSIC.pdf"
@@ -564,29 +586,36 @@
 
     <!-- Sección Footer  -->
     <footer class="footer">
-      <div class="container_rrss">
-        <!-- <p class="heading_h4"><strong>Puedes seguirme en:</strong></p> -->
-        <div class="text_icon">
-          <a href="https://instagram.com/elenapicanso" target="_blank"
+      <div class="container__rrss">
+        <div class="text__icon">
+          <a
+            href="https://instagram.com/elenapicanso"
+            target="_blank"
+            aria-label="Conoce más sobre mi en Instagram"
             ><i class="fa-brands fa-instagram"></i
           ></a>
         </div>
-        <div class="text_icon">
+        <div class="text__icon">
           <a
             href="https://www.linkedin.com/in/elenarodriguezpicanco/"
             target="_blank"
+            aria-label="Conoce más sobre mi en LinkedIn"
             ><i class="fa-brands fa-linkedin"></i
           ></a>
         </div>
-        <div class="text_icon">
+        <div class="text__icon">
           <a
             href="https://www.youtube.com/channel/UCV-wSZQVGU9h-fmcbMz1ltw"
             target="_blank"
+            aria-label="Conoce más sobre mi en Youtube"
             ><i class="fa-brands fa-youtube"></i
           ></a>
         </div>
-        <div class="text_icon">
-          <a href="https://twitter.com/elenapicanco" target="_blank"
+        <div class="text__icon">
+          <a
+            href="https://twitter.com/elenapicanco"
+            target="_blank"
+            aria-label="Conoce más sobre mi en Twitter"
             ><i class="fa-brands fa-twitter"></i
           ></a>
         </div>
@@ -599,6 +628,6 @@
       </p>
     </footer>
 
-    <script src="./js/index.js"></script>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>

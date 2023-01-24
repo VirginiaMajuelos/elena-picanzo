@@ -1,7 +1,7 @@
 /* Tab navbar */
 
-const hamburguer = document.querySelector(".hamburguer");
-const navLink = document.querySelector(".nav__link");
+const hamburguer = document.querySelector(".navbar__hamburguer");
+const navLink = document.querySelector(".navbar__link");
 
 hamburguer.addEventListener("click", () => {
   navLink.classList.toggle("hide");
@@ -21,9 +21,28 @@ function openPage(pageName) {
 
 document.getElementById("defaultOpen").click();
 
+/* Button Arrow */
+let buttonGoUp = document.getElementById("btn_goUp");
+
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    buttonGoUp.style.display = "block";
+  } else {
+    buttonGoUp.style.display = "none";
+  }
+}
+
+function upFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
 /*Galeria*/
 
-const images = document.querySelectorAll(".gallery__item img");
+const images = document.querySelectorAll(".section-galeria__gallery--item img");
 let imgIndex;
 let imgSrc;
 images.forEach((img, i) => {
@@ -36,7 +55,7 @@ images.forEach((img, i) => {
 let imgModal = (src) => {
   const modal = document.createElement("div");
   modal.setAttribute("class", "modal");
-  document.querySelector(".main").append(modal);
+  document.querySelector(".section-galeria__main").append(modal);
   const newImage = document.createElement("img");
   newImage.setAttribute("src", src);
   const closeBtn = document.createElement("i");
@@ -69,7 +88,6 @@ let nextImg = () => {
 
 let prevImg = () => {
   imgIndex--;
-  console.log(imgIndex);
   if (imgIndex < 0) {
     imgIndex = images.length - 1;
   }
