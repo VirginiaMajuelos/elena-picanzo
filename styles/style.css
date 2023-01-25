@@ -38,6 +38,7 @@ body {
 
 .enlaces {
   color: var(--color-primary);
+  text-decoration: none;
 }
 
 span {
