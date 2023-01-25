@@ -41,6 +41,12 @@ body {
   text-decoration: none;
 }
 
+.enlace__telefono {
+  color: var(--color-gray);
+  text-decoration: none;
+  cursor: pointer;
+}
+
 span {
   color: var(--color-primary);
 }
